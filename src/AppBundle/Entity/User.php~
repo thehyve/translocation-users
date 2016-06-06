@@ -1,0 +1,62 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * User
+ *
+ * @ORM\Table(name="users")
+ * @ORM\Entity
+ */
+class User
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="username", type="string", length=30)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="users_username_seq", allocationSize=1, initialValue=1)
+     */
+    private $username;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=100, nullable=true)
+     */
+    private $password;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="salt", type="string", length=100, nullable=true)
+     */
+    private $salt;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="firstname", type="string", length=100, nullable=true)
+     */
+    private $firstname;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lastname", type="string", length=100, nullable=true)
+     */
+    private $lastname;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=50, nullable=true)
+     */
+    private $email;
+
+
+}
+

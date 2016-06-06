@@ -1,0 +1,45 @@
+AppBundle\Entity\IdpUser:
+    type: entity
+    table: users
+    id:
+        username:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        password:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        salt:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        firstname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        lastname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        email:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }
